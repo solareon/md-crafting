@@ -17,7 +17,8 @@
 
 <h1>Dependencies</h1>
 **ox_menu**
-*qb-menu**
+
+**qb-menu**
 
 <h1>How to install like a fuckin boss</h1>
 
