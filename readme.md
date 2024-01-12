@@ -27,7 +27,7 @@
 - **STEP 1**
 Drag Resource into your script folder
 
-- ** STEP 2** 
+- **STEP 2** 
 fill out your config
 
 - **STEP 3 **
