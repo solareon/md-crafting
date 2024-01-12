@@ -16,15 +16,10 @@
 - Our partner [1of1 Servers]( https://1of1servers.com/) and their [discord](https://discord.gg/1of1servers) for their amazing server hosting! absolutely top notch.
 
 <h1>Dependencies</h1>
-- **ox_lib**
-
-
-- **ability to read the readme**
-
-- 
-- **a cat**
-
-- 
+ **ox_lib**
+ **ability to read the readme**
+ **a cat**
+ 
 <h1>How to install like a fuckin boss</h1>
 
 - **STEP 1**
