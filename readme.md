@@ -17,7 +17,9 @@
 
 <h1>Dependencies</h1>
 -   ox_lib 
--   ability to read the readme 
+
+-   ability to read the readme
+  
 -  a cat 
  
 <h1>How to install like a fuckin boss</h1>
