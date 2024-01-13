@@ -1,5 +1,5 @@
 Config = {}
-Config.Oxmenu = true -- if you want to use ox menu then change to true
+Config.Oxmenu = false -- if you want to use ox menu then change to true
 Config.defaultmaxmake = 1 -- default the max amount someone can make at once
 Config.defaultanimationtime = 4000 -- how many seconds the animation and progressbar takes in ms
 Config.defaultxp = 5 -- amount of default xp
@@ -7,6 +7,7 @@ Config.defaultsuccesschance = 100 -- default amount of success to craft
 Config.defaultamount = 1 -- default amount of the item you recieve 
 Config.Inventoryimages = "ps-inventory/html/images/"
 Config.Defaultanimation = "uncuff"
+Config.skillcheckcommand = "craftskill"
 
 Config.skills = {
     [1] = {label = 'crafting', nextlevel = 1000, xp = 'craftingxp'},
@@ -61,15 +62,20 @@ or
 
 Config.Crafting = {
 MiscCraft = {
-    ['lockpick'] = {                  xp = 25, ingredienttext = "plastic X 10, Metal Scrap X 10",          max = 5,               recipe = { ['plastic'] = 10, ['metalscrap'] = 10}},
+    ['lockpick'] = {                  xp = 25, ingredienttext = "plastic X 10, Metal Scrap X 10",          max = 5,           successchance = 0,    recipe = { ['plastic'] = 10, ['metalscrap'] = 10}},
     ['screwdriverset'] = {            xp = 25, ingredienttext = "Steel X 10, Metal Scrap X 10",            max = 5,               recipe = { ['steel'] = 10, ['metalscrap'] = 10}},
     ['electronickit'] = {             xp = 25, ingredienttext = "Aluminum X 10, Metal Scrap X 10",         max = 5,               recipe = { ['aluminum'] = 10, ['metalscrap'] = 10}},
     ['radioscanner'] = {              xp = 25, ingredienttext = "Aluminum X 10, Steel X 10",               max = 5,               recipe = { ['steel'] = 10, ['aluminum'] = 10}},
     ['handcuffs'] = {                 xp = 25, ingredienttext = "steel X 100, Metal Scrap X 100",          max = 5,               recipe = { ['steel'] = 100, ['metalscrap'] = 100}},
     ['repairkit'] = {                 xp = 25, ingredienttext = "steel X 100, Metal Scrap X 100",          max = 5,               recipe = { ['steel'] = 100, ['metalscrap'] = 100}},
 },
+pistol = {
+    ['weapon_pistol'] = {             xp = 25, ingredienttext = "plastic X 10, Metal Scrap X 10",          max = 1,   successchance = 50, lvlreq = 1,   recipe = { ['plastic'] = 10, ['metalscrap'] = 10}},
+
+},
 }
 
 Config.Locations = {
-    [1] = {location = vector3(68.2, 140.13, 100.54), Craftstation = Config.Crafting.MiscCraft,          targetlabel = "Craft Attachments", job = '', gang = "", icon = ""},
+    [1] = {location = vector3(68.2, 140.13, 100.54), Craftstation = Config.Crafting.MiscCraft,          targetlabel = "Craft Items", job = '', gang = "", icon = ""},
+    [2] = {location = vector3(-142.38, -1697.1, 30.77), Craftstation = Config.Crafting.pistol,          targetlabel = "Craft Gun", job = '', gang = "", icon = ""},
 }

@@ -192,7 +192,7 @@ if QBCore.Functions.GetPlayerData().items == data.requireditem or data.requiredi
 end	
 end)
 
-RegisterCommand('craftingskills',function()
+RegisterCommand(Config.skillcheckcommand,function()
 	local craftingskills = {}
 
 	for k, v in pairs (Config.skills) do 

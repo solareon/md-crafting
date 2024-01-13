@@ -19,12 +19,14 @@ RegisterServerEvent("md-craft:server:crafting2", function(amountmake, item, xp, 
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local craft = false
+    local fail = false
     local total = 0
     local count = 0
     local reward = 1 * amountmake
     local xpgain = xp * amountmake
     local successchance = math.random(1,100)
     local lvl = Player.PlayerData.metadata['crafting']
+   
     for k, v in pairs(table[item].recipe) do
         total = total + 1
         local recipe = Player.Functions.GetItemByName(k)
@@ -36,6 +38,7 @@ RegisterServerEvent("md-craft:server:crafting2", function(amountmake, item, xp, 
         if success + lvl >= successchance then 
             craft = true
         else     
+            fail = true
             TriggerClientEvent('QBCore:Notify', src, 'You Failed At Crafting This', "error")
         end    
     else
@@ -48,7 +51,8 @@ RegisterServerEvent("md-craft:server:crafting2", function(amountmake, item, xp, 
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[k], "remove", v * amountmake * amountrecieve) 
         end
         TriggerEvent("md-craft:server:crafting", src, item, reward, xpgain, skillxp, skill, amountrecieve)
-    else
+    end
+    if fail then
         for k, v in pairs(table[item].recipe) do
            if  Player.Functions.RemoveItem(k, v * amountmake) then
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[k], "remove", v * amountmake * amountrecieve) 
