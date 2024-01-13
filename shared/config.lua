@@ -62,7 +62,7 @@ or
 
 Config.Crafting = {
 MiscCraft = {
-    ['lockpick'] = {                  xp = 25, ingredienttext = "plastic X 10, Metal Scrap X 10",          max = 5,           successchance = 0,    recipe = { ['plastic'] = 10, ['metalscrap'] = 10}},
+    ['lockpick'] = {                  xp = 25, ingredienttext = "plastic X 10, Metal Scrap X 10",          max = 5,           successchance = 100,    recipe = { ['plastic'] = 10, ['metalscrap'] = 10}},
     ['screwdriverset'] = {            xp = 25, ingredienttext = "Steel X 10, Metal Scrap X 10",            max = 5,               recipe = { ['steel'] = 10, ['metalscrap'] = 10}},
     ['electronickit'] = {             xp = 25, ingredienttext = "Aluminum X 10, Metal Scrap X 10",         max = 5,               recipe = { ['aluminum'] = 10, ['metalscrap'] = 10}},
     ['radioscanner'] = {              xp = 25, ingredienttext = "Aluminum X 10, Steel X 10",               max = 5,               recipe = { ['steel'] = 10, ['aluminum'] = 10}},
