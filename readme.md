@@ -54,7 +54,7 @@ for k, v in pairs (QBConfig.Skills) do
 so it should look like this 
 
 ```
-
+PlayerData.metadata['dealerrep'] = PlayerData.metadata['dealerrep'] or 0
  for k, v in pairs (QBConfig.Skills) do 
     PlayerData.metadata[v] = PlayerData.metadata[v] or 0
  end
