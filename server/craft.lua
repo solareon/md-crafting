@@ -20,21 +20,21 @@ RegisterServerEvent("md-craft:server:crafting2", function(amountmake, item, xp, 
     local Player = QBCore.Functions.GetPlayer(src)
     local craft = false
     local fail = false
-    local total = 0
-    local count = 0
+    local need = 0
+    local have = 0
     local reward = 1 * amountmake
     local xpgain = xp * amountmake
     local successchance = math.random(1,100)
     local lvl = Player.PlayerData.metadata['crafting']
    
     for k, v in pairs(table[item].recipe) do
-        total = total + 1
+        need = need + 1
         local recipe = Player.Functions.GetItemByName(k)
         if recipe ~= nil and recipe.amount >= v * amountmake then
-            count = count + 1
+            have = have + 1
         end
     end
-    if total == count then
+    if need == have then
         if success + lvl >= successchance then 
             craft = true
         else     
