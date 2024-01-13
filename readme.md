@@ -15,19 +15,22 @@
 
 - Our partner [1of1 Servers]( https://1of1servers.com/) and their [discord](https://discord.gg/1of1servers) for their amazing server hosting! absolutely top notch.
 
+- Big ShoutOut to LDPNZ for this install guide [here](https://clipchamp.com/watch/tkKjEusl3d5)
+
 <h1>Dependencies</h1>
-- **ox_lib**
-- **ability to read the readme**
-- **a cat**
+**ox_menu**
+
+**qb-menu**
+
 <h1>How to install like a fuckin boss</h1>
 
 - **STEP 1**
 Drag Resource into your script folder
 
-- ** STEP 2** 
+- **STEP 2** 
 fill out your config
 
-- **STEP 3 **
+- **STEP 3**
 add this to qb-core config
 ```
 QBConfig.Skills = {
@@ -58,7 +61,7 @@ so it should look like this
 ```	
 
 
-- ** STEP 4** 
+- **STEP 4** 
 look at the commented out part of the config. it has what options are avaible to add to crafting and which are REQUIRED and which are not required.
 
 - **STEP 5**
